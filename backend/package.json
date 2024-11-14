@@ -5,13 +5,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "build": "npm install && npm run build:clean && npm run build:copy",
-    "build:clean": "rimraf dist",
-    "build:copy": "copyfiles -u 1 \"src/**/*\" dist/",
-    "test": "jest --coverage",
-    "lint": "eslint .",
-    "seed": "node scripts/seed.js",
-    "deploy": "npm run build && npm run start"
+    "build": "npm install && npm run start"
   },
   "keywords": [],
   "author": "",
