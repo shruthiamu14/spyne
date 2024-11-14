@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:5000', // Change if needed
+  baseURL: 'https://spyne-backend-udxr.onrender.com', // Change if needed
 });
 
 // Add a request interceptor to include the token in the headers
