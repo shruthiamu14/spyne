@@ -1,0 +1,220 @@
+/* CreateProduct.css */
+.create-product-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.back-button {
+  color: #5c4b8c;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  transition: color 0.2s;
+}
+
+.back-button:hover {
+  color: #423663;
+}
+
+.create-product-form {
+  display: grid;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.95rem;
+}
+
+.product-input,
+.product-textarea {
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.product-input:focus,
+.product-textarea:focus {
+  border-color: #5c4b8c;
+  box-shadow: 0 0 0 4px rgba(92, 75, 140, 0.1);
+  outline: none;
+}
+
+.product-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.tags-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.tag-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tag-icon {
+  position: absolute;
+  left: 12px;
+  font-size: 1.2rem;
+}
+
+.tag-input {
+  padding: 12px 16px 12px 40px;
+  width: 100%;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.upload-area {
+  border: 2px dashed #5c4b8c;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.upload-area:hover {
+  background-color: rgba(92, 75, 140, 0.05);
+}
+
+.upload-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.upload-hint {
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.product-submit-button {
+  padding: 14px 28px;
+  background-color: #5c4b8c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.product-submit-button:hover:not(:disabled) {
+  background-color: #423663;
+  transform: translateY(-1px);
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.image-previews-grid,
+.images-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.image-preview-container,
+.image-container {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.image-preview,
+.preview-image,
+.existing-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.image-preview:hover,
+.preview-image:hover,
+.existing-image:hover {
+  transform: scale(1.05);
+}
+
+.delete-image-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+.image-container:hover .delete-image-btn {
+  opacity: 1;
+}
+
+.delete-image-btn:hover {
+  background: #ef4444;
+  transform: scale(1.1);
+}
