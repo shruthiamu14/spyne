@@ -29,8 +29,8 @@ This project is a full-stack car management application that allows users to cre
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/car-management-app.git
-    cd car-management-app/backend
+    git clone https://github.com/shruthiamu14/spyne.git
+    cd spyne/backend
     ```
 
 2. Install backend dependencies:
